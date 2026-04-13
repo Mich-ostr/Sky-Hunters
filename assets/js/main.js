@@ -88,7 +88,7 @@ ctx.fill();
 }
 
 const img = new Image();
-img.src = "./assets/img/enemigo.jpeg";
+img.src = "/videojuego-canvas/assets/object.png";
 
 function crearEnemigos() {
     enemigos = [];
