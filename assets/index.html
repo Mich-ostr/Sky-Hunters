@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sky Hunt</title>
+
+<link rel="icon" href="assets/favicon.ico">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark bg-dark px-3">
+    <span class="navbar-brand">🎮 Sky Hunt</span>
+    <span class="text-white">Nivel: <span id="nivel">1</span></span>
+</nav>
+
+<!-- INSTRUCCIONES -->
+<div class="container text-center mt-2 text-white">
+    <p>🎯 Haz clic en los objetos antes de que escapen</p>
+</div>
+
+<!-- CANVAS -->
+<canvas id="canvas"></canvas>
+
+<!-- SCORE -->
+<div class="score text-white">
+    <p>Eliminados: <span id="score">0</span></p>
+    <p>Progreso: <span id="porcentaje">0%</span></p>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-2">
+    Creado por: Michell
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
