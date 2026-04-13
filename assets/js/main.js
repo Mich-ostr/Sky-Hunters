@@ -35,7 +35,10 @@ class Enemigo {
         ctx.save();
         ctx.globalAlpha = this.alpha;
 
-        ctx.drawImage(img, this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
+       ctx.fillStyle = "red";
+ctx.beginPath();
+ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+ctx.fill();
 
         ctx.restore();
     }
