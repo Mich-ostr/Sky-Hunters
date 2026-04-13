@@ -2,12 +2,12 @@ body {
     margin: 0;
     overflow: hidden;
     background: black;
-    cursor: url('../img/cursor.png'), auto;
+    cursor: url('/assets/img/cursor.jpeg'), auto;
 }
 
 canvas {
     display: block;
-    background: url('../img/fondo.jpg') no-repeat center center/cover;
+    background: url('/assets/img/fondo.png') no-repeat center center/cover;
 }
 
 h3, p {
