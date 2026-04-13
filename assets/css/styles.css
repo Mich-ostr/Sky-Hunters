@@ -2,20 +2,14 @@ body {
     margin: 0;
     overflow: hidden;
     background: black;
-    cursor: url("../assets/cursor.png"), auto;
+    cursor: url('../img/cursor.png'), auto;
 }
 
 canvas {
     display: block;
-    background: url("../assets/bg.jpg") no-repeat center center;
-    background-size: cover;
+    background: url('../img/fondo.jpg') no-repeat center center/cover;
 }
 
-.score {
-    position: absolute;
-    top: 80px;
-    left: 20px;
-    background: rgba(0,0,0,0.6);
-    padding: 15px;
-    border-radius: 10px;
+h3, p {
+    color: white;
 }
