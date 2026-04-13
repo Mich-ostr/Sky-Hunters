@@ -88,7 +88,7 @@ ctx.fill();
 }
 
 const img = new Image();
-img.src = "img/enemigo.png";
+img.src = "./assets/img/enemigo.jpeg";
 
 function crearEnemigos() {
     enemigos = [];
