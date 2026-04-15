@@ -1,15 +1,158 @@
 body {
-    margin: 0;
-    overflow: hidden;
-    background: black;
-    cursor: url('/assets/img/cursor.jpeg'), auto;
+  margin: 0;
+  font-family: 'Fredoka', sans-serif;
+
+  /* fondo más suave tipo cielo */
+  background: radial-gradient(circle at top, #e0fbff, #ffffff);
+  overflow-x: hidden;
 }
 
+/* ================= NAVBAR ================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 24px;
+
+  /* glassmorphism */
+  background: rgba(144, 219, 244, 0.6);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+  color: #1f1f1f;
+  font-weight: bold;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* texto navbar */
+.nav-left,
+.nav-center,
+.nav-right {
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+/* hover más pro */
+.navbar div:hover {
+  transform: translateY(-2px) scale(1.05);
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* ================= GAME ================= */
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 30px;
+}
+
+/* canvas estilo “arena” */
 canvas {
-    display: block;
-    background: url('/assets/img/fondo.png') no-repeat center center/cover;
+  border-radius: 24px;
+
+  background: radial-gradient(circle at center, #a2d2ff, #74c0fc);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35),
+    inset 0 0 60px rgba(255, 255, 255, 0.15);
+
+  cursor: none;
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+
+  transition: transform 0.2s ease;
 }
 
-h3, p {
-    color: white;
+/* efecto leve al interactuar */
+canvas:active {
+  transform: scale(0.99);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  margin-top: 25px;
+  text-align: center;
+  padding: 16px;
+
+  background: rgba(144, 219, 244, 0.7);
+  backdrop-filter: blur(8px);
+
+  color: #1f1f1f;
+  font-weight: bold;
+
+  border-top: 1px solid rgba(255,255,255,0.4);
+
+  box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= ANIMACIONES ================= */
+@keyframes floatUI {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+  100% { transform: translateY(0px); }
+}
+
+.navbar {
+  animation: floatUI 6s ease-in-out infinite;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+  canvas {
+    width: 95%;
+    height: auto;
+  }
+}
+
+body{
+  margin:0;
+  font-family:'Fredoka',sans-serif;
+  background: radial-gradient(circle, #e0fbff, #ffffff);
+}
+
+/* HUD fuera del canvas */
+.hud{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:10px;
+  font-size:18px;
+  font-weight:bold;
+  background:rgba(0,0,0,0.05);
+  backdrop-filter: blur(8px);
+}
+
+/* canvas */
+canvas{
+  display:block;
+  margin:auto;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.3);
+  cursor:none;
+}
+
+/* cursor custom */
+.cursor{
+  position:fixed;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:#ffafcc;
+  pointer-events:none;
+  box-shadow:0 0 10px #ffafcc;
 }
